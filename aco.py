@@ -1,4 +1,5 @@
 import re
+
 town = (
     '''
 1 11003.611100 42102.500000
@@ -94,12 +95,12 @@ beta = 0.8
 
 # Ants structure. 0 = can visit, 1 = distance travelled, 2 
 ants = [[] for i in range(no_of_ants)]
-no_of_towns = range(1,39);
+no_of_towns = range(1,39)
 
 # Initially can visit all towns
 for ant in ants:
 	ant.append(no_of_towns)
 
 
-print ants
+# print ants
 
