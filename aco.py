@@ -63,27 +63,24 @@ y_coord = map(float, y_coord)
 
 
 # Computing Distance matrix
-distance = [[] for i in range(37)]
-for i in range(0, 37):
-    for j in range(0, 37):
+distance = [[] for i in range(38)]
+for i in range(0, 38):
+    for j in range(0, 38):
         distance[i].append(
             (((y_coord[i] - y_coord[j]) * (y_coord[i] - y_coord[j])) +
              ((x_coord[i] - x_coord[j]) * (x_coord[i] - x_coord[j])))
         )
 
-# print distance
+#print distance
 
 # Computing Tau
-tau = [[] for i in range(37)]
-for i in range(0, 37):
-    for j in range(0, 37):
+tau = [[] for i in range(38)]
+for i in range(0, 38):
+    for j in range(0, 38):
         tau[i].append(0)
 
 # print tau
 
-def nextTown(tau,ants):
-	for i in range(1,ants):
-		print 'a'
 
 
 # Paramters for ACO:
