@@ -1,4 +1,5 @@
 import re
+import math
 
 town = (
     '''
@@ -67,11 +68,13 @@ distance = [[] for i in range(38)]
 for i in range(0, 38):
     for j in range(0, 38):
         distance[i].append(
+            math.sqrt(
             (((y_coord[i] - y_coord[j]) * (y_coord[i] - y_coord[j])) +
              ((x_coord[i] - x_coord[j]) * (x_coord[i] - x_coord[j])))
+            )
         )
 
-#print distance
+# print distance
 
 # Computing Tau
 tau = [[] for i in range(38)]
@@ -79,25 +82,4 @@ for i in range(0, 38):
     for j in range(0, 38):
         tau[i].append(0)
 
-# print tau
-
-
-
-# Paramters for ACO:
-no_of_ants = 10
-evaporation_rate = 0.6
-q_const = 1
-alpha = 0.8
-beta = 0.8
-
-# Ants structure. 0 = can visit, 1 = distance travelled, 2 
-ants = [[] for i in range(no_of_ants)]
-no_of_towns = range(1,39)
-
-# Initially can visit all towns
-for ant in ants:
-	ant.append(no_of_towns)
-
-
-# print ants
 
